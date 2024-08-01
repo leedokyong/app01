@@ -36,6 +36,12 @@ public class UserController {
     *
     *   xxx(@RequestParam(name = "no") int userNO)
     *   - 요청파라미터의 이름은 no고 그 값을 담을 매개변수명은 userNo로 설정한 것이다.
+    *
+    *    xxx(@RequestParam(name = "id" required=false) String id)
+    *   - 요청파라미터에 id가 없어도 상관없다
+    *
+    *   xxx(@RequestParam(name = "page" required = false defaultValue"1") int page)
+    *   -요청파라미터 page는 없어도 상관없고, 없으면 기본값이 1이다
     */
     @PostMapping("/register")
     public String register(String id, String password, String name, String email) {
